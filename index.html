@@ -1,24 +1,294 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cartorio-digital-landing</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalização Cartorial</title>
+    <meta name="description" content="Serviços profissionais em digitalização documental para cartórios">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Digitalização Cartorial</h1>
+                <nav class="nav">
+                    <a href="#quem-somos" class="nav-link">Quem Somos</a>
+                    <a href="#servicos" class="nav-link">Serviços</a>
+                    <a href="#digitalizacao" class="nav-link">Digitalização</a>
+                </nav>
+                <button class="btn btn-contact" onclick="openWhatsApp()">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Contato
+                </button>
+            </div>
+        </div>
+    </header>
 
-    <meta property="og:title" content="cartorio-digital-landing" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    Serviços de Digitação <br>
+                    <span class="hero-title-accent">para Cartórios</span>
+                </h2>
+                <p class="hero-description">
+                    Soluções profissionais em digitalização documental com precisão, 
+                    segurança e conformidade com o Decreto 10.278
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openWhatsApp()">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Solicitar Orçamento
+                    </button>
+                    <button class="btn btn-outline" onclick="scrollToServices()">
+                        Conhecer Serviços
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Quem Somos Section -->
+    <section id="quem-somos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Quem Somos</h3>
+                <p class="section-description">
+                    Uma equipe especializada com anos de experiência em digitalização e 
+                    processamento de documentos cartoriais
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <div class="team-avatar">
+                            <img src="public/lovable-uploads/d21078b8-fab2-47a0-9e8e-4e84a7903442.png" alt="Maurício de Brito">
+                        </div>
+                        <h4 class="team-name">Maurício de Brito</h4>
+                        <p class="team-role">Programador de Sistemas</p>
+                    </div>
+                    <div class="team-card-content">
+                        <p class="team-description">
+                            Com quase 18 anos de experiência, é responsável por garantir a precisão 
+                            nos processos. Especialista em conversão de formatos de documentos, 
+                            assegura que todos os arquivos atendam aos padrões técnicos exigidos.
+                        </p>
+                    </div>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <div class="team-avatar">
+                            <img src="public/lovable-uploads/f0ccd201-b0f6-493a-934d-0ab2eb613fb5.png" alt="Wênia Cardozo">
+                        </div>
+                        <h4 class="team-name">Wênia Cardozo</h4>
+                        <p class="team-role">Especialista em Digitalização</p>
+                    </div>
+                    <div class="team-card-content">
+                        <p class="team-description">
+                            Especialista em digitalização documental com foco em registros civis 
+                            e imobiliários. Com 2 anos de experiência na área, possui expertise 
+                            em digitação de documentos de difícil leitura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Nossos Serviços</h3>
+                <p class="section-description">
+                    Soluções completas em digitalização documental com foco em qualidade e segurança
+                </p>
+            </div>
+
+            <div class="services-card">
+                <div class="services-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">Documentos Diversos</h4>
+                        <p class="feature-description">Manuscritos antigos e documentos de difícil leitura</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">100% Remoto</h4>
+                        <p class="feature-description">Trabalho seguro e confidencial</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">Conformidade CRC</h4>
+                        <p class="feature-description">Ajustes e conversões compatíveis</p>
+                    </div>
+                </div>
+                
+                <div class="services-content">
+                    <p class="services-main-text">
+                        Nossa equipe está preparada para lidar com documentos diversos, incluindo manuscritos 
+                        antigos ou de difícil leitura, sempre garantindo precisão e qualidade. Também realizamos 
+                        ajustes e conversões de documentos para formatos compatíveis com o CRC.
+                    </p>
+                    <p class="services-sub-text">
+                        O trabalho é realizado de forma 100% remota, com total segurança e confidencialidade. 
+                        Estamos expandindo nossos serviços para atender outros cartórios e estamos à disposição 
+                        para colaborar com sua demanda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digitalização Section -->
+    <section id="digitalizacao" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">O que é a Digitalização de Cartórios</h3>
+                <p class="section-description">
+                    Entenda como a digitalização moderniza e protege o acervo documental
+                </p>
+            </div>
+
+            <div class="digitalization-card">
+                <div class="digitalization-content">
+                    <div class="digitalization-main">
+                        <div class="digitalization-text">
+                            <h4 class="digitalization-title">Processo de Digitalização</h4>
+                            <p class="digitalization-description">
+                                A digitalização consiste em pegar todo o acervo físico do cartório, em papel, 
+                                escanear as folhas de acordo com o Decreto 10.278 e indexá-los no sistema 
+                                próprio fornecido pelo governo. Isso auxilia para que os serviços prestados 
+                                para população possam ser feitos de forma ágil.
+                            </p>
+                        </div>
+                        <div class="digitalization-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <div class="benefit-icon benefit-icon-green">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                            </div>
+                            <h5 class="benefit-title">Agilidade</h5>
+                            <p class="benefit-description">Serviços mais rápidos para a população</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon benefit-icon-blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h5 class="benefit-title">Segurança</h5>
+                            <p class="benefit-description">Proteção contra perdas e danos</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon benefit-icon-amber">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                                </svg>
+                            </div>
+                            <h5 class="benefit-title">Backup</h5>
+                            <p class="benefit-description">Armazenamento seguro em nuvem</p>
+                        </div>
+                    </div>
+
+                    <div class="digitalization-detailed">
+                        <p>
+                            A quantidade de documentos que circulam em cartórios é gigantesca. A digitalização 
+                            chega como uma solução moderna e acessível, ganhando cada vez mais espaço por 
+                            otimizar as atividades e os resultados entregues por essas repartições.
+                        </p>
+                        <p>
+                            A realização de procedimentos tão importantes em papel gera uma quantidade enorme 
+                            de folhas manuseadas, o que além de causar danos ao meio ambiente, coloca em risco 
+                            as informações contidas. No caso de incêndio ou alagamento, por exemplo, documentos 
+                            se perderiam, o que não acontece se a documentação estiver salva em nuvem, com backup. 
+                            Portanto, a digitalização de cartórios é também uma forma de garantir a proteção 
+                            para o cidadão que tem seus dados resguardados a partir de segurança digital avançada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h3 class="cta-title">Pronto para Modernizar seu Cartório?</h3>
+                <p class="cta-description">
+                    Entre em contato conosco e descubra como podemos ajudar na digitalização 
+                    do seu acervo documental
+                </p>
+                <button class="btn btn-primary btn-large" onclick="openWhatsApp()">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Entrar em Contato
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2024 Digitalização Cartorial. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-floating">
+        <button class="whatsapp-btn" onclick="openWhatsApp()">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

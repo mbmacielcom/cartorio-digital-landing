@@ -1,0 +1,598 @@
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    background: #0f172a;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.nav {
+    display: none;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-contact {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-contact:hover {
+    background: #15803d;
+}
+
+.btn-primary {
+    background: #16a34a;
+    color: white;
+    padding: 0.75rem 2rem;
+}
+
+.btn-primary:hover {
+    background: #15803d;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #7dd3fc;
+    border: 1px solid #7dd3fc;
+    padding: 0.75rem 2rem;
+}
+
+.btn-outline:hover {
+    background: #7dd3fc;
+    color: #0f172a;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, #0f172a 0%, #1e40af 50%, #0f172a 100%);
+    padding: 5rem 0;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-title-accent {
+    color: #7dd3fc;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .hero-buttons {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-alt {
+    background: #f8fafc;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.team-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2563eb;
+    transition: box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-header {
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+}
+
+.team-avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.team-role {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.team-card-content {
+    padding: 0 2rem 2rem;
+}
+
+.team-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services-card {
+    background: linear-gradient(90deg, #1e40af 0%, #0f172a 100%);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.services-features {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .services-features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    background: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.feature-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+.feature-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    color: #7dd3fc;
+    font-size: 0.875rem;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-main-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.services-sub-text {
+    color: #7dd3fc;
+}
+
+/* Digitalization Section */
+.digitalization-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.digitalization-content {
+    padding: 2rem;
+}
+
+.digitalization-main {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .digitalization-main {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.digitalization-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.digitalization-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.digitalization-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.digitalization-icon svg {
+    width: 8rem;
+    height: 8rem;
+    color: #2563eb;
+}
+
+.benefits-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.benefit {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+}
+
+.benefit-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.benefit-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.benefit-icon-green {
+    background: #dcfce7;
+}
+
+.benefit-icon-green svg {
+    color: #16a34a;
+}
+
+.benefit-icon-blue {
+    background: #dbeafe;
+}
+
+.benefit-icon-blue svg {
+    color: #2563eb;
+}
+
+.benefit-icon-amber {
+    background: #fef3c7;
+}
+
+.benefit-icon-amber svg {
+    color: #d97706;
+}
+
+.benefit-title {
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-description {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.digitalization-detailed {
+    background: #eff6ff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.digitalization-detailed p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.digitalization-detailed p:last-child {
+    margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(90deg, #1e40af 0%, #0f172a 100%);
+    padding: 5rem 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-description {
+    font-size: 1.25rem;
+    color: #7dd3fc;
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-text {
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+}
+
+.whatsapp-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.whatsapp-btn:hover {
+    background: #15803d;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-btn .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.875rem;
+    }
+    
+    .cta-title {
+        font-size: 1.875rem;
+    }
+    
+    .services-card,
+    .digitalization-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
