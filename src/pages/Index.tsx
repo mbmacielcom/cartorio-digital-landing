@@ -86,8 +86,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="shadow-lg hover:shadow-xl transition-shadow border-l-4 border-l-blue-600">
               <CardHeader className="text-center">
-                <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-12 h-12 text-blue-600" />
+                <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d21078b8-fab2-47a0-9e8e-4e84a7903442.png" 
+                    alt="Maurício de Brito"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">Maurício de Brito</CardTitle>
                 <p className="text-blue-600 font-semibold">Programador de Sistemas</p>
