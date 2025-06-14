@@ -1,4 +1,6 @@
 
+/* ... keep existing code (Reset and base styles, container, header, nav, buttons, icon, hero section) */
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -266,6 +268,70 @@ body {
     line-height: 1.6;
 }
 
+/* Tipos de Registros Section */
+.registros-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .registros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .registros-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.registro-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid #16a34a;
+}
+
+.registro-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.registro-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.registro-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+.registro-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.registro-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
 /* Services Section */
 .services-card {
     background: linear-gradient(90deg, #1e40af 0%, #0f172a 100%);
@@ -334,6 +400,8 @@ body {
 .services-sub-text {
     color: #7dd3fc;
 }
+
+/* ... keep existing code (Digitalization Section, CTA Section, Footer, WhatsApp Floating Button, Animations, Responsive Design, Smooth Scrolling) */
 
 /* Digitalization Section */
 .digitalization-card {
@@ -588,6 +656,10 @@ body {
     
     .services-card,
     .digitalization-content {
+        padding: 1.5rem;
+    }
+    
+    .registro-card {
         padding: 1.5rem;
     }
 }
