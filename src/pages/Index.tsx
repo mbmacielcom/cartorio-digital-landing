@@ -103,8 +103,12 @@ const Index = () => {
 
             <Card className="shadow-lg hover:shadow-xl transition-shadow border-l-4 border-l-blue-600">
               <CardHeader className="text-center">
-                <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-12 h-12 text-blue-600" />
+                <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/f0ccd201-b0f6-493a-934d-0ab2eb613fb5.png" 
+                    alt="Wênia Cardozo"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <CardTitle className="text-2xl text-slate-900">Wênia Cardozo</CardTitle>
                 <p className="text-blue-600 font-semibold">Especialista em Digitalização</p>
